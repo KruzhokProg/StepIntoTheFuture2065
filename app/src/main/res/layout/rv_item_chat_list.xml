@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="gravity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgvRvItem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/user_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRvItemUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Олег Нестеров"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgvRvItem"
+        app:layout_constraintTop_toTopOf="@+id/imgvRvItem" />
+
+    <TextView
+        android:id="@+id/tvRvItemLastMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Привет! Как дела?"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvRvItem"
+        app:layout_constraintStart_toStartOf="@+id/tvRvItemUsername" />
+
+    <TextView
+        android:id="@+id/tvTimePassed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="5 мин"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tvRvItemCountUnreadMsg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/round_message"
+        android:paddingTop="3dp"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvRvItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgvRvItem" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRvItemLastMsg"
+        app:layout_constraintStart_toEndOf="@+id/tvRvItemLastMsg"
+        app:layout_constraintTop_toTopOf="@+id/tvRvItemLastMsg"
+        app:srcCompat="@drawable/ic_point" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
