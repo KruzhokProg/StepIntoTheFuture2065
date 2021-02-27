@@ -11,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StepIntoTheFuture2065">
-        <activity android:name=".MyAccount"></activity>
+        <activity android:name=".SignIn"></activity>
+        <activity android:name=".MyAccount" />
         <activity android:name=".ChatList" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SignIn">
+        <activity android:name=".NavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
