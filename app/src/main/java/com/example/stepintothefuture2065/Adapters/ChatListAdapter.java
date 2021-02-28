@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.stepintothefuture2065.ChatActivity;
-import com.example.stepintothefuture2065.ChatList;
 import com.example.stepintothefuture2065.Model.User;
 import com.example.stepintothefuture2065.R;
 

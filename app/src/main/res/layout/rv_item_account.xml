@@ -19,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/lectionImage"
+            android:id="@+id/layoutImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/lection">
 
             <TextView
-                android:id="@+id/tvTitleLectionRvITem"
+                android:id="@+id/tvTitleRvITem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -39,15 +39,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvInfoRvItemLection"
+                android:id="@+id/tvInfoRvItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text="8 октября 2020 · 13К просмотров"
                 android:textColor="#CACACA"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/tvTitleLectionRvITem"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitleLectionRvITem" />
+                app:layout_constraintStart_toStartOf="@+id/tvTitleRvITem"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleRvITem" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

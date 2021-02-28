@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,12 +23,23 @@ public class SignIn extends AppCompatActivity {
     Button btnSignIn, btnSignUp;
 
     FirebaseAuth auth;
-    DatabaseReference reference;
+
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+
+        sharedPref = getSharedPreferences("userInfo", MODE_PRIVATE);
+        String email =sharedPref.getString("email", "");
+        if(!email.equals("")){
+            Intent intent = new Intent(SignIn.this, NavigationActivity.class);
+            startActivity(intent);
+        }
+        else{
+            setContentView(R.layout.activity_sign_in);
+        }
 
         etEmail = findViewById(R.id.etEmail_SignIn);
         etPass = findViewById(R.id.etPassword_SignIn);
@@ -35,6 +47,8 @@ public class SignIn extends AppCompatActivity {
         btnSignIn = findViewById(R.id.btnSignUp2);
         btnSignUp = findViewById(R.id.btnSignUp);
         auth = FirebaseAuth.getInstance();
+
+
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,10 +72,13 @@ public class SignIn extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()) {
-                                Intent intent = new Intent(SignIn.this, MyAccount.class);
-                                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putString("email", email);
+                                editor.apply();
+
+                                Intent intent = new Intent(SignIn.this, NavigationActivity.class);
                                 startActivity(intent);
-                                //finish();
                             }
                             else{
                                 Toast.makeText(SignIn.this, "Ошибка при входе!", Toast.LENGTH_SHORT).show();

@@ -2,16 +2,16 @@ package com.example.stepintothefuture2065.Model;
 
 import android.content.Intent;
 
-public class Lection {
+public class RvModel {
 
     private Integer id;
     private String title;
     private String info;
     private Integer image;
 
-    public Lection() { }
+    public RvModel() { }
 
-    public Lection(Integer id, String title, String info, Integer image) {
+    public RvModel(Integer id, String title, String info, Integer image) {
         this.id = id;
         this.title = title;
         this.info = info;

@@ -26,7 +26,7 @@
                 android:background="#E5E5E5">
 
                 <TextView
-                    android:id="@+id/tvUsername"
+                    android:id="@+id/tvNameUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp"
@@ -44,9 +44,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Москва, 24 года"
-                    app:layout_constraintEnd_toEndOf="@+id/tvUsername"
-                    app:layout_constraintStart_toStartOf="@+id/tvUsername"
-                    app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+                    app:layout_constraintEnd_toEndOf="@+id/tvNameUser"
+                    app:layout_constraintStart_toStartOf="@+id/tvNameUser"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameUser" />
 
                 <TextView
                     android:id="@+id/tvProStatus"
@@ -64,7 +64,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameUser" />
 
                 <TextView
                     android:id="@+id/tvProName"

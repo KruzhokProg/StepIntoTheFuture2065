@@ -9,7 +9,6 @@ import android.view.MenuItem;
 
 import com.example.stepintothefuture2065.Fragments.AccountFragment;
 import com.example.stepintothefuture2065.Fragments.ChatListFragment;
-import com.example.stepintothefuture2065.Fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class NavigationActivity extends AppCompatActivity {
@@ -21,8 +20,9 @@ public class NavigationActivity extends AppCompatActivity {
 
         BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
         btnNav.setOnNavigationItemSelectedListener(navListener);
-
+        btnNav.findViewById(R.id.person).performClick();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new AccountFragment()).commit();
+
     }
 
 
@@ -33,7 +33,7 @@ public class NavigationActivity extends AppCompatActivity {
                     Fragment selectedFragment = null;
 
                     switch (item.getItemId()){
-                        case R.id.home:
+                        case R.id.person:
                             selectedFragment = new AccountFragment();
                             break;
                         case R.id.chat:
